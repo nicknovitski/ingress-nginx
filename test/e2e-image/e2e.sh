@@ -35,8 +35,6 @@ kubectl create clusterrolebinding permissive-binding \
 --user=kubelet \
 --serviceaccount=default:ingress-nginx-e2e || true
 
-kubectl apply -f manifests/rbac.yaml
-
 ginkgo_args=(
     "-randomizeSuites"
     "-randomizeAllSpecs"
